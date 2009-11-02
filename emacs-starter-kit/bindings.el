@@ -1,0 +1,1 @@
+(global-set-key [home] 'smart-beginning-of-line)
