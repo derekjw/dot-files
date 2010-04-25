@@ -3,6 +3,10 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
+(set-default-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1")
+(set-frame-width (selected-frame) 160)
+(set-frame-height (selected-frame) 40)
+
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 

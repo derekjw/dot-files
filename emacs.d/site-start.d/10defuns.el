@@ -82,3 +82,5 @@
   "Enable things that are convenient across all coding buffers."
   (run-hooks 'coding-hook))
 
+;; Fix for shell colors?
+(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-filter)

@@ -1,2 +1,2 @@
-(load "sbt")
+(require 'sbt)
 (require 'scala-mode-auto)

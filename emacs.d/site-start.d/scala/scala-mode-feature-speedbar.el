@@ -1,16 +1,16 @@
 ;;; -*-Emacs-Lisp-*-
-;;; scala-mode-feature.el - 
+;;; scala-mode-feature-speedbar.el - 
 
 ;; Copyright (C) 2009 Scala Dev Team at EPFL
 ;; Authors: See AUTHORS file
 ;; Keywords: scala languages oop
-;; $Id: scala-mode-variables.el 17069 2009-02-10 08:30:51Z nielsen $
+;; $Id$
 
 ;;; License
 
 ;; SCALA LICENSE
 ;;  
-;; Copyright (c) 2002-2009 EPFL, Lausanne, unless otherwise specified.
+;; Copyright (c) 2002-2010 EPFL, Lausanne, unless otherwise specified.
 ;; All rights reserved.
 ;;  
 ;; This software was developed by the Programming Methods Laboratory of the
@@ -47,10 +47,44 @@
 ;;; Code
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(provide 'scala-mode-variables)
+(provide 'scala-mode-feature-speedbar)
 
-;; Feature specific variables that need to be shared!
+(eval-when-compile 
+  (require 'scala-mode-feature-tags))
 
-; define scala-mode-hook
-(defvar scala-mode-hook nil
-  "Hook to run after installing scala mode")
+(require 'speedbar)
+
+;; Customization
+ 
+(defgroup scala-mode-feature:speedbar nil
+  "Options how the speedbar works under Scala mode"
+  :group 'scala)
+
+
+(defcustom scala-mode-feature:speedbar-open nil
+  "Normally scala-mode starts with the speedbar closed.\
+Turning this on will open it whenever scala-mode is loaded."
+  :type 'boolean
+  :set (lambda (sym val)
+         (set-default sym val)
+         (when val
+             (speedbar 1)))
+  :group 'scala-mode-feature:speedbar)
+
+
+(defun scala-mode-feature-speedbar-install () 
+  (define-key speedbar-file-key-map "\C-t" '(lambda () (interactive) 
+					      (speedbar-flush-expand-line)))
+
+  (add-hook 'speedbar-mode-hook 
+	    (lambda() 
+	      (speedbar-add-supported-extension "\\.scala")))
+
+  (setq speedbar-fetch-etags-command scala-mode-feature:tags-command)
+
+  (setq speedbar-fetch-etags-arguments '("-e" "-f -"))
+
+  (add-to-list 'speedbar-fetch-etags-parse-list
+		'("\\.scala" . speedbar-parse-c-or-c++tag))
+
+  t)

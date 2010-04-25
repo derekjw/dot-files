@@ -45,6 +45,8 @@
      (minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
      (info-xref ((t (:foreground "#729fcf"))))
      (info-xref-visited ((t (:foreground "#ad7fa8"))))
+     (compilation-warning ((t (:foreground "#edd400"))))
+     (compilation-info ((t (:foreground "#d0d0d0"))))
      )))
 
 (provide 'color-theme-tango)
