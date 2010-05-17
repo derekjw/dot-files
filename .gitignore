@@ -3,4 +3,4 @@ emacs.d/places
 emacs.d/auto-save-list
 emacs.d/elpa
 emacs.d/url
-emacs.d/site-start.d/my-local-prefs
+emacs.d/site-start.d/custom
