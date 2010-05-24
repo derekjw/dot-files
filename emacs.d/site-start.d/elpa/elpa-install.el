@@ -1,6 +1,8 @@
 (require 'cl)
 
 (defvar elpa-packages (list 'clojure-mode
+                            'slime-repl
+                            'paredit
                             'css-mode
                             'haml-mode
                             'js2-mode

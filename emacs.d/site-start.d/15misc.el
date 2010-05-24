@@ -82,3 +82,7 @@
 
 ;; make emacs use the clipboard
 (setq x-select-enable-clipboard t)
+
+(require 'paredit)
+(mapcar (lambda (hook) (add-hook hook 'enable-paredit-mode))
+        '(clojure-mode-hook lisp-mode-hook slime-repl-mode-hook emacs-lisp-mode-hook))
