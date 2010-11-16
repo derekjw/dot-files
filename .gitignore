@@ -4,3 +4,5 @@ emacs.d/auto-save-list
 emacs.d/elpa
 emacs.d/url
 emacs.d/site-start.d/custom
+emacs.d/ac-comphist.dat
+emacs.d/tramp
