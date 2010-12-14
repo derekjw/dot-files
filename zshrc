@@ -22,7 +22,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-path=(/home/derek/Programs /home/derek/.cabal/bin $path)
+path=(/home/derek/Programs /home/derek/.cabal/bin /home/derek/.gem/ruby/1.9.1/bin $path)
 
 if [ "$PS1" ]; then
     export RSYNC_RSH=ss
