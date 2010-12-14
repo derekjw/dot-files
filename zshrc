@@ -22,16 +22,17 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-path=(/home/derek/Programs /home/derek/.cabal/bin /home/derek/.gem/ruby/1.9.1/bin $path)
+path=(/home/derek/Programs /home/derek/.cabal/bin $path)
 
 if [ "$PS1" ]; then
     export RSYNC_RSH=ss
     export EDITOR="emacs -nw"
     export VISUAL="emacs"
     alias ed="$EDITOR"
-fi
 
-export ICAROOT="/home/derek/Programs/ICAClient"
+    alias psa="ps auxf"
+
+fi
 
 case $TERM in
     xterm)
