@@ -37,5 +37,8 @@ fi
 case $TERM in
     xterm)
         export TERM=xterm-256color
+	;;
+    putty)
+        export TERM=putty-256color
         ;;
 esac
