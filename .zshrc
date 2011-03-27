@@ -32,6 +32,8 @@ if [ "$PS1" ]; then
 
     alias psa="ps auxf"
 
+    # Keybindings
+    bindkey "^[[3~" delete-char
 fi
 
 case $TERM in

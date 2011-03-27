@@ -1,0 +1,11 @@
+startup_message off
+autodetach      on
+defutf8         on
+altscreen       on
+defbce          on
+attrcolor       b ".I"
+term            screen-256color-bce
+defscrollback   10000
+
+hardstatus on
+hardstatus alwayslastline '%{= kg}[ %{+b g}%H %{-b g}][%= %{= kw}%?%-Lw%?%{r}(%{+b w}%n*%f%t%?(%u)%?%{-b r})%{w}%?%+Lw%?%?%= %{g}][%{+b b} %d/%m %{w}%c %{-b g}]%{= dd}'
