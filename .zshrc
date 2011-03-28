@@ -32,6 +32,11 @@ if [ "$PS1" ]; then
 
     alias psa="ps auxf"
 
+    # due to git status being incorporated into oh-my-zsh themes, I
+    # keep my actual git repo in a subdirectory of home. This alias
+    # makes it easier to work with.
+    alias githome="git --git-dir=\"$HOME/.home-git/.git\""
+
     # Keybindings
     bindkey "^[[3~" delete-char
 
