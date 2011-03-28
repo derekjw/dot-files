@@ -34,6 +34,10 @@ if [ "$PS1" ]; then
 
     # Keybindings
     bindkey "^[[3~" delete-char
+
+    # For Gnome Terminal
+    bindkey '^[OH' beginning-of-line
+    bindkey '^[OF' end-of-line
 fi
 
 case $TERM in
