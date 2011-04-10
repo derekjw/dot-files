@@ -12,3 +12,5 @@
 /.emacs.d/ac-comphist.dat
 /.emacs.d/tramp
 /.emacs.d/session*
+*#
+*~

@@ -5,6 +5,7 @@
 (defun color-theme-tango ()
   "A color theme based on Tango Palette."
   (interactive)
+  (setq frame-background-mode 'dark)
   (color-theme-install
    '(color-theme-tango
      ((background-color . "#202020")
