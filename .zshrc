@@ -22,7 +22,11 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+source $HOME/.infinality-settings.sh
+
 path=(/home/derek/Programs /home/derek/.cabal/bin $path)
+
+export WINEARCH=win32
 
 if [ "$PS1" ]; then
     export RSYNC_RSH=ss

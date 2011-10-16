@@ -33,7 +33,7 @@
 ;; ie `(color-theme-tango
 ;; list-faces-display will show all font faces
 
-(defun color-theme-tango ()
+(defun color-theme-tango2 ()
   "A color theme based on Tango Palette."
   (interactive)
   (color-theme-install
@@ -190,6 +190,6 @@
 
 ;; color theme (requires http://www.emacswiki.org/cgi-bin/wiki?ColorTheme )
 (require 'color-theme)
-(provide 'tango-theme)
+(provide 'color-theme-tango2)
 ;; (provide 'color-theme-tango-light)
 
