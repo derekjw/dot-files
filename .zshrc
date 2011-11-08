@@ -26,6 +26,8 @@ source $HOME/.infinality-settings.sh
 
 path=(/home/derek/Programs /home/derek/.cabal/bin $path)
 
+export JAVA_OPTS="-Dfile.encoding=UTF8 -server -d64 -XX:+UnlockExperimentalVMOptions -XX:+UseCompressedOops -XX:+AggressiveOpts -XX:+DoEscapeAnalysis -XX:+UseG1GC -Xms64m -Xmx2g -XX:PermSize=64m -XX:MaxPermSize=512m"
+
 export WINEARCH=win32
 
 if [ "$PS1" ]; then
