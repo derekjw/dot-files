@@ -59,3 +59,5 @@ case $TERM in
         export TERM=putty-256color
         ;;
 esac
+
+source $HOME/.private.zshrc
